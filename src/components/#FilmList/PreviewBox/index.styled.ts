@@ -1,90 +1,76 @@
 import styled from 'styled-components';
 
-
-
-export const Structure = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 20px 40px;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 20px 20px 300px 20px;
-    background: linear-gradient(135deg, #CA26FF 7.17%, #F4CAC0 85.48%, #FFF3B0 100%);
-
-    @media(max-width: 992px){
-
-        flex-direction: column;
-        width: 100%;
-    }
-`
-
-export const TextContent = styled.div`
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-`
-
-export const Heding = styled.h1`
-color: ${props => props.theme.accentColor1};
-
-font-family: Segoe UI;
-font-size: 60px;
-font-style: normal;
-font-weight: 700;
-margin: 0px;
-    
-`
-
-export const Subtitle = styled.h2`
-color: ${props => props.theme.textcolor};
-margin: 0px;
-font-family: Segoe UI;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-
-    
-`
-
-export const Desctiption = styled.p`
-color: ${props => props.theme.textcolor};
-margin-top: 25px;
-padding-left: 60px;
-font-family: Segoe UI;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 149.5%; /* 29.9px */
-letter-spacing: 0.3px;
-    
-`
-
-export const Button = styled.button`
-    cursor: pointer;
-    border: 0;
+export const Hero =styled.div`
+position: relative;
+    min-height: 750px;
+    height: 100vh;
     width: 100%;
-    margin: 20px 0px 0px 0px;
-    height: 40px;
-    flex: 0 0 auto;
-    border-radius: 10px;
-    background-color: ${props => props.theme.accentColor1};
-    box-shadow: 0px 0px 5px ${props => props.theme.shadowColor} ;
-    color: ${props => props.theme.textColor};
-    &:hover{
-        background-color: ${props => props.theme.accentColor2};
-        color: white;
-        transition: 0.1s;
-}
-font-size: ${props=> props.theme.textSizeL};
-font-weight: 600;
-
-    
+    max-height: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-block: var(--section-padding);
+    color: ${props=> props.theme.white};
 `
 
-export const ImageWrapp = styled.div`
-
-    
+export const Container = styled.div`
+    padding-inline: 15px;
+    z-index: 100;
+    margin: 0 auto;
 `
+
+export const BG = styled.img`
+position: absolute;
+top: 0;
+right:0;
+background-size: cover;
+    background-position: center;
+    min-height: 750px;
+    height: 100vh;
+    max-height: 1000px;
+`
+  
+  export const HeroContent = styled.div`
+   margin-top: 60px;
+   
+`
+  export const MetaWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px 25px;
+  margin-bottom: 50px;
+  `
+export const Btn = styled.a`
+color: ${props=> props.theme.white};
+font-size: ${props=> props.theme.textSizeTextL};
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2px;
+display: flex;
+align-items: center;
+gap: 10px;
+width: 200px;
+justify-content: center;
+padding: 16px 30px;
+background-color: ${props=> props.theme.gunmetal1};
+border: 2px solid ${props=> props.theme.citrine};
+border-radius: 50px;
+transition: var(--transition-1);
+`
+  export const HeroSubtitle = styled.div`
+  color: ${props=> props.theme.citrine};
+    font-size: ${props=> props.theme.textSizeTitle};
+    font-weight: 700;
+    margin-bottom: 10px;
+  `
+  
+  export const HeroTitle = styled.h1`
+  margin-bottom: 30px;
+  font-size: 60px;
+  `
+  
+export const Strong = styled.strong`
+  color: ${props=> props.theme.citrine}; 
+  `
